@@ -159,11 +159,11 @@
       <button class="btn" id="btn-next" title="下一張 (→ / Space)">Next</button>
       <button class="btn" id="btn-last" title="到最後一張 (End)">End</button>
 
-      <div class="spacer"></div>
+      <!-- <div class="spacer"></div> -->
 
-      <button class="btn" id="btn-toggle-hint" title="顯示/隱藏提示">
+      <!-- <button class="btn" id="btn-toggle-hint" title="顯示/隱藏提示">
         Hint
-      </button>
+      </button> -->
     </header>
 
     <div class="stage" id="stage">
@@ -198,7 +198,7 @@
       const btnPrev = document.getElementById("btn-prev");
       const btnNext = document.getElementById("btn-next");
       const btnLast = document.getElementById("btn-last");
-      const btnToggleHint = document.getElementById("btn-toggle-hint");
+      // const btnToggleHint = document.getElementById("btn-toggle-hint");
 
       function show(i) {
         idx = (i + images.length) % images.length;
@@ -306,9 +306,9 @@
       btnNext.addEventListener("click", () => show(idx + 1));
       btnLast.addEventListener("click", () => show(images.length - 1));
 
-      btnToggleHint.addEventListener("click", () => {
-        hint.classList.toggle("hidden");
-      });
+      // btnToggleHint.addEventListener("click", () => {
+      //   hint.classList.toggle("hidden");
+      // });
 
       // 初始化（顯示第一張；提示可見）
       show(0);
